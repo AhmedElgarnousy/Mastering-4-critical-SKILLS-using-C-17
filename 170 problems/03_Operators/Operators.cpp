@@ -10,6 +10,7 @@
 using namespace std;
 
 int main() {
+
 	/*
 		Section: Operators.
 		Description: Problem #1: Guess Program Output
@@ -182,37 +183,54 @@ int main() {
 
 
 	/*
-		 Section: Operators.
-		 Description: Problem #2: Last 3 digits sum
-		 Write a program that reads an integer and prints the sum of its last 3 digits.
- 	 	 	 Inputs -> Outputs examples
- 	 	 	 15 -> 6
- 	 	 	 125 -> 8
- 	 	 	 1000 -> 0
- 	 	 	 1001 -> 1
- 	 	 	 1234 -> 9
- 	 	 	 99999 -> 27
-		 Level: Medium Challenge
-	*/
+	Section: Operators.
+	Description: Problem #2: Last 3 digits sum
+	Write a program that reads an integer and prints the sum of its last 3 digits.
+ 	 	Inputs -> Outputs examples
+ 	 	 15 -> 6
+ 	 	 125 -> 8
+ 	 	 1000 -> 0
+ 	 	 1001 -> 1
+ 	 	 1234 -> 9
+ 	 	 99999 -> 27
+	Level: Medium Challenge
 
+	int number;
+	cout<<"Enter a number: ";
+	cin>>number;
+    // 123
+	int last_digit = number % 10;
+	number /= 10;
+	int second_digit = number % 10;
+	number /= 10;
+	int first_digit = number % 10;
 
+	cout<<(last_digit + second_digit + first_digit);
+	 */
 
 	/*
-		 Section: Operators.
-		 Description: Problem #3: 4th digits from the end
-		 Write a program that reads an integer and print the 4th from the right side. If
-			no such digit, print 0
-		 Inputs => outputs
-		 15 => 0
-		 125 => 0
-		 1000 => 1
-		 5001 => 5
-		 1234 => 1
-		 654321 => 4
-		 99999 => 9
-		 Level: Medium Challenge
-	*/
+	Section: Operators.
+	Write a program that reads an integer and print the 4th from the right side. If
+	 no such digit, print 0
+	Description: Problem #3: 4th digits from the end
+	 Inputs => outputs
+		15 => 0
+		125 => 0
+		1000 => 1
+		5001 => 5
+		1234 => 1
+		654321 => 4
+		99999 => 9
+	Level: Medium Challenge
 
+	int num;
+	cout<<"Enter a number";
+	cin>>num;
+
+	num /=1000;
+	int fouth_dig_Rs = num %10;
+	cout<<fouth_dig_Rs;
+	 */
 
 	/*
 	 Section: Operators
@@ -222,7 +240,26 @@ int main() {
 		 E.g. for input 8 -> 100
 		 E.g. for input 133 -> 7
 	 Level: Hard Challenge
-	 */
+
+
+	int num;
+	cout<<"Enter a number: ";
+	cin>>num;
+	bool is_even = num%2 == 0;
+	bool is_odd = num%2 == 1;
+
+	cout<<(is_even * 100 + is_odd * 7);
+
+	//if (is_even == 1)
+	//{
+		//cout<<"100";
+	//}
+	//else
+	//{
+		//cout<<"7";
+	//}
+	*/
+
 
 
 	/*

@@ -48,7 +48,21 @@ int main ()
 	   cout<<" It is easier to build strong children than to repair broken men";
 	   cout <<" children have never been very good at listening to their elders, but they have never failed to imitate them ";
 	   cout<<"children are our most valuable resource\n";
-	       return 0;
 
+	if (__cplusplus == 201703L){
+		cout<< "c++17\n";
+	}
+	else if (__cplusplus == 201402L){
+		cout<< "c++14\n";
+	}
+	else if (__cplusplus == 201103L){
+		cout<< "c++11\n";
+	}
+	else if (__cplusplus == 199711L){
+		cout<< "c++98\n";
+	}
+	else{
+		cout << "pre-standard c++\n";
+	}
     return 0;
 }

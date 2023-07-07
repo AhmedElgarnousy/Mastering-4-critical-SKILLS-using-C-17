@@ -1,0 +1,13 @@
+Handling the difficulties
+
+* Moving to medium/hard chanllenges 
+  . Typically you will fail
+  . sometimes fail to solve, but manage to understand the solution
+
+
+* ToDo list approach 
+  . Give a serious trial for the practice & homework (e.g. 30min)
+  . Check out my solution 
+  . My code will typically be smarter & shorter than yours 
+  . Putting effort in understanding my solutions will teach you alot 
+  . What is hard to do/understand. put in the todo list and come back later.
