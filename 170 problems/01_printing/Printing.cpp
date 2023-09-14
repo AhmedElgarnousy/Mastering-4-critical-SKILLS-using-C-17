@@ -9,38 +9,50 @@
 #include<iostream>
 using namespace std;
 
+/*********************************************************************************
+	 * 													Printing Homework                                  *
+**********************************************************************************/
+
 int main ()
 {
- cout<<"work smart not hard \n";
+/********************************************************************************
+	 * 										Homework 1#: Guess the run-time output                  *
+*********************************************************************************/
+ cout<<"\n\n work smart not hard \n";
 
-	/*
-	Homework 2 sol 1#: Write code to print the following
-	A) A triangle with angel 90 degree
-	*/
 
-    cout<<"*\n**\n***\n****\n*****";
-    cout<<endl;
-	/*Homework 2 sol 2*/
-	cout<<"*"<<endl<<
-		  ""	;
+/********************************************************************************
+* 								 Homework 2#: Write code to print the following               *
+********************************************************************************/
+	
+
+  cout<<"*\n**\n***\n****\n*****";
+  cout<<endl;
+
+	cout<<"*"<<endl<< ""	;
 
 	cout<<"    *\n" "   ***\n  *****\n *******\n*********";
-    cout<<endl;
+  cout<<endl;
 
 	cout<<"   *   "<<endl<<
-		  "  ***  "<<endl<<
-		  " ***** "<<endl<<
-		  "  ***  "<<endl<<
-		  "   *   ";
+		  	"  ***  "<<endl<<
+		  	" ***** "<<endl<<
+		  	"  ***  "<<endl<<
+		  	"   *   ";
     cout<<endl;
 
-	/*Homework#1 sol 1 *2*/
+
 
     cout<<"    1\n" "   232\n""  34543\n"" 4567654\n""567898765\n";
     cout<<endl;
 
     cout<<"            1\n" "          1   1\n""        1   2   1\n""      1   3   3   1\n""    1  4   6   4    1\n""   1  5   10   10  5  1";
     cout<<endl;
+
+
+/********************************************************************************
+* 										 Homework #3: Find all errors and fix them                *
+********************************************************************************/
 
 	   cout<<"children must be taught how to think , not what to think ";
 	   cout<<" we worry about what will become tomorrow, yet we forget that he is someone today \n";
