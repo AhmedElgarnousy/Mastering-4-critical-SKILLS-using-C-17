@@ -9,72 +9,96 @@
 
 #include <iostream>
 using namespace std;
+/*****************************************************************************
+*                     Data Types and Variables Homework                      *
+/****************************************************************************/
 
 int main(void) {
 
-	/*
-	Section: DataTypesAndVariables.cpp .
-	Description: Problem #1: Math operations
-		         Write a program that reads 2 numbers and print their + - * / as following .
-	Level: Easy Challenge
-	*/
 
-	/*
-	float num1, num2;
-	cin>>num1 >> num2;
+/*****************************************************************************
+*                   Easy: Problem #1: Math operations                        *
+/****************************************************************************/
 
-	//cout<<"sum is: "<<num1+ num2 << "\n"<<"subtract is: "<<num1 - num2  <<"\n"  <<"Division is: "<<num1 / num2 << "\n" <<"Multiplication is: "<<num1 * num2 << "\n";
-	cout<< num1 << "+" << num2 << "=" <<num1+num2<<"\n"
-        << num1 << "-" << num2 << "=" <<num1-num2<<"\n"
-        << num1 << "/" << num2 << "=" <<num1/num2<<"\n"
-        << num1 << "*" << num2 << "=" <<num1*num2;
-	*/
+/*
+int num1, num2;
+cout<<"Runnign "<<"\n" ;
+cin>>num1>>num2;
 
-	/*
-	Section: DataTypesAndVariables.
-	Description: Problem #2: Students grades
-		         Write a program that reads 2 students information about math exam
-                 Read per student: name, id and grade
-                 Then print them. See the picture
-	Level: Easy Challenge
-	*/
+cout<<num1<< " + " <<num2 << "= "<<num1 + num2<<"\n" 
+		<<num1<< " - " <<num2 << "= "<<num1 - num2<<"\n" 
+		<<num1<< " * " <<num2 << "= "<<num1 / num2<<"\n" 
+		<<num1<< " / " <<num2 << "= "<<num1 * num2 
+		<<endl;
+*/
 
-	/*
-	string name1 ;
-	int id1 ;
-	float grade1 ;
 
-	string name2 ;
-	int id2 ;
-	float grade2 ;
+/*****************************************************************************
+*                   Easy: Problem #2: Students grades                        *
+/****************************************************************************/
 
-	cout<<"what is student 1 name: ";
-	cin>>name1;
-	cout<<"His id: ";
-	cin>>id1;
-	cout<<"His math exam grade: ";
-	cin>>grade1;
+/*
+string name1;
+int id1, grade1;
 
-	cout<<"what is student 2 name: ";
-	cin>>name2;
-	cout<<"His id: ";
-	cin>>id2;
-	cout<<"His math exam grade: ";
-	cin>>grade2;
+string name2;
+int id2, grade2;
 
-	cout<<endl;
+cout<<"What is student 1 name: ";
+cin>>name1;
+cout<<"His id: "<<"\n";
+cin>>id1;
+cout<<"His math exam grade: "<<"\n";
+cin>>grade1;
 
-	cout<<"Students grades in math\n"
-			<<name1<<"(with id "<<id1<<")"
-			<<" got grade: "
-			<<grade1<<"\n";
+cout<<"What is student 2 name: ";
+cin>>name2;
+cout<<"His id: "<<"\n";
+cin>>id2;
+cout<<"His math exam grade: "<<"\n";
+cin>>grade2;
 
 	cout<<"Students grades in math\n"
 			<<name2<<"(with id "<<id2<<")"
 			<<" got grade: "
 			<<grade2<<"\n";
 	cout<<"Average grade is: "<<(grade1 + grade2)/2;
-	*/
+
+*/
+
+/*****************************************************************************
+*                   Easy: Problem #3: Even and Odd sum                       *
+/****************************************************************************/
+
+
+/*****************************************************************************
+*                   Medium: Problem #1: Guess Program Output                 *
+/****************************************************************************/
+
+
+/*****************************************************************************
+*                   Medium: Problem #2: Swapping 2 numbers!                  *
+/****************************************************************************/	
+
+
+
+/*****************************************************************************
+*                   Hard: Problem #1: Swapping 3 numbers                     *
+/****************************************************************************/	
+
+
+/*****************************************************************************
+*                   Hard: Problem #2: Print Me                               *
+/****************************************************************************/	
+
+/*****************************************************************************
+*                   Hard: Problem #3: Sum numbers from 1 to N                *
+/****************************************************************************/	
+
+
+
+
+
 
 	/*
 	Section: DataTypesAndVariables.
