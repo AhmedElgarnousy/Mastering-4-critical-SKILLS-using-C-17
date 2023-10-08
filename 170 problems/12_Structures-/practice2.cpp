@@ -43,26 +43,14 @@ struct employee
 };
 
 
-
-
 int main()
 {
-//  employee emp1;
-//  emp1.emp_name.first = "Ahmed";   
-//  emp1.emp_name.middle = "Kamal";   
-//  emp1.emp_name.last = "El garnousy";   
+    full_name my_name("ahmed");
+    cout<<my_name.first<<"\n";
 
-//  emp1.age = 22;
-
-//  cout<<emp1.emp_name.first<<" "<< emp1.emp_name.middle <<" "<<emp1.emp_name.last<<"\n";
-//  cout<<emp1.age;
-
-full_name my_name("ahmed");
-cout<<my_name.first<<"\n";
-
-full_name his_name("mostafa", "mohand");
-cout<<his_name.first<<"\n";
-cout<<his_name.last<<"\n";
+    full_name his_name("mostafa", "mohand");
+    cout<<his_name.first<<"\n";
+    cout<<his_name.last<<"\n";
 
   return 0;
 }

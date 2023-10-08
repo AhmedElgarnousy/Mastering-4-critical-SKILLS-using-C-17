@@ -38,7 +38,7 @@ int added = 0;    // Number of employees
 
 void print_employees()
 {
-  	cout << "******************\n";
+  cout<<"******************\n";
 
   for(int i = 0; i < added; ++i)
     employee_arr[i].print_employee();
