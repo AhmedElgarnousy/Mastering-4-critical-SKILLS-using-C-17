@@ -102,7 +102,7 @@ for( int i = 0; i< 4; i++)
 */
 
 /*********************************************************
-                       *Practice: Max Value of 2D Array*
+            *Practice: Max Value of 2D Array*
 *********************************************************/
 
 /*
@@ -136,7 +136,7 @@ cout<<"The maximum value is at position "<<rowIdx<<" "<<colIdx<<"(with a value o
 */
 
 /*********************************************************
-             *   Practice:special Print   *
+              *   Practice:special Print   *
 *********************************************************/
 // sum of the left-diagonal(from the upper-left position diagonally down)
 // sum of the right-diagonal(from the upper-right position diagonally down)
