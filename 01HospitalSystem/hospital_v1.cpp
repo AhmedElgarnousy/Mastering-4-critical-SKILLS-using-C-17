@@ -21,7 +21,7 @@ int UserChoice;
 const int  MAX_QUEUE {5}; // spots of patients in each specialization
 const int  MAX_SPECIALIZATION {20};
 
-string patient_names[MAX_SPECIALIZATION+1][MAX_QUEUE]; // Specialization(1 to 20) 
+string patient_names[MAX_SPECIALIZATION+1][MAX_QUEUE] = {" "}; // Specialization(1 to 20) 
 int patient_status[MAX_SPECIALIZATION+1][MAX_QUEUE]; //status(0,1  0==regular & 1==urgent )
 int queue_length[MAX_SPECIALIZATION +1 ] = {0};
 
@@ -51,7 +51,6 @@ int main()
   return 0;
 }
 
-
 /*******************************************************************************
                           * Functions Definitions *
 *******************************************************************************/
@@ -74,46 +73,30 @@ void add_patient()
     cout<<"Enter specialization, name, status: ";
     cin>>Spec_Idx;
     queue_length[Spec_Idx] ++;
-    cin>>patient_names[Spec_Idx][queue_length[Spec_Idx]] >> patient_status[Spec_Idx][ queue_length[Spec_Idx]];
+    cin>>patient_names[Spec_Idx][queue_length[Spec_Idx]] >> patient_status[Spec_Idx][queue_length[Spec_Idx]];
 
+       
+    /* Feature: if status urgent put it in beggining */
+    if(patient_status[Spec_Idx][queue_length[Spec_Idx]])   // urgent  == 1
+    {    
+       // store urgent in temp name
+       string tempName =  patient_names[Spec_Idx][queue_length[Spec_Idx]];
+       int tempStatus =  patient_status[Spec_Idx][queue_length[Spec_Idx]];
 
-    /* Feature: For each specialization, there are only 5 available spots [queue] */    
-      for(int i = 1; i < MAX_SPECIALIZATION +1 ; i++ )
-      {
-        if(queue_length[i] == 5)
-        {
-          cout<<"sorry we can't add move more patients for this specialization \n";
-        }
+      // shift right names to put urgent in start
+      for(int i = queue_length[Spec_Idx] - 1 ; i > 0; i--){ 
+        patient_names[Spec_Idx][i+1] = patient_names[Spec_Idx][i] ; 
+        patient_status[Spec_Idx][i+1] = patient_status[Spec_Idx][i] ; 
       }
-
-    /* Feature: if status urgent put it in beggining*/
-
-    // search until 
-    // for(int i){
-
-    // }
-    /*
-    sol1: Has bug
-    // if reguler
-    if(!(Patient_Status[NumOfPatient]))
-    {
-      // check previous one if urgent
-      if((Patient_Status[NumOfPatient - 1]))
-        {
-          //switch between them
-          string tempName;
-          int TempStatus;
-         TempStatus =  Patient_Status[NumOfPatient ];
-         Patient_Status[NumOfPatient] =  Patient_Status[NumOfPatient -1];
-         Patient_Status[NumOfPatient - 1] =  TempStatus;
-
-         tempName =  Patient_Names[NumOfPatient];
-         Patient_Names[NumOfPatient] =  Patient_Names[NumOfPatient -1];
-         Patient_Names[NumOfPatient - 1] =  tempName;
-        }
+      // assign urgent in start 
+      patient_names[Spec_Idx][1] = tempName;
+       patient_status[Spec_Idx][1] = tempStatus;
     }
-    */
-
+    else
+    {
+      // regular
+      // patient_names[Spec_Idx][queue_length[Spec_Idx]] = patient_names[Spec_Idx][queue_length[Spec_Idx]];
+    }    
 }
 
 void print_all_patients()
@@ -124,18 +107,22 @@ void print_all_patients()
         {
           cout<<"************************************* \n";
           cout<<"There are "<<queue_length[i] <<" Patients"<<" in spectialization " << i <<"\n";
+
           for(int col = 1;  col <= queue_length[i]; col++)
           {
-            //print patient name with urgent or not
-            if(patient_status[i][col])
+            if(queue_length[i] > 6)
             {
-              cout<<"val of i and col status 1  "<<i<<" "<<col<<"\n";
-              cout<<patient_names[i][col]<<" " << "urgent" <<"\n";
+              cout<<"sorry we can't add move more patients for this specialization \n";
             }
             else
             {
-              cout<<"val of i and col status 0  "<<i<<" "<<col<<"\n";
-              cout<<patient_names[i][col]<<" " << "regularr" <<"\n";
+              //print patient name with urgent or not
+                if(patient_status[i][col])
+                  // cout<<"val of i and col status 1  "<<i<<" "<<col<<"\n";
+                  cout<<patient_names[i][col]<<" " << "urgent" <<"\n";
+                else
+                  // cout<<"val of i and col status 0  "<<i<<" "<<col<<"\n";
+                  cout<<patient_names[i][col]<<" " << "regularr" <<"\n";
             }
           }
         }
@@ -145,17 +132,27 @@ void print_all_patients()
 void Get_next_patient()
 {
   int RequestedSpec;
+  
     cout<<"Enter specialization: ";
     cin>>RequestedSpec;
 
-      if(patient_names[RequestedSpec][0] == " ") // last ele: patient_names[RequestedSpec][queue_length[RequestedSpec]]
+      if(queue_length[RequestedSpec] == 0) // last ele: patient_names[RequestedSpec][queue_length[RequestedSpec]]
           cout<<"No patient at the moment. Have rest, Dr";
-      cout<<patient_names[RequestedSpec][0]<<" please go with the Dr \n"; // first patient_names[RequestedSpec][0]
+
+
+      cout<<patient_names[RequestedSpec][1]<<" please go with the Dr \n"; // first patient_names[RequestedSpec][0]
+      // remove it by shiting left
+      for(int i = 1;  i < queue_length[RequestedSpec] ; i++){ 
+        patient_names[RequestedSpec][i] = patient_names[RequestedSpec][i+1] ; 
+        patient_status[RequestedSpec][i] = patient_status[RequestedSpec][i+1] ; 
+      }
+      queue_length[RequestedSpec] --;
+
+
 }
 
 void Exit()
 {
     // cout<<" ";
 }
-
 

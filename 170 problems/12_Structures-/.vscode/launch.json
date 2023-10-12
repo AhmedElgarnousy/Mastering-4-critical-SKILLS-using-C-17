@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Automotive mechatronics/E-Mobility Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/12_Structures",
-      "program": "d:/Automotive mechatronics/E-Mobility Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/12_Structures/build/Debug/outDebug",
+      "cwd": "d:/Automotive mechatronics/E-Mobility Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/12_Structures-",
+      "program": "d:/Automotive mechatronics/E-Mobility Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/12_Structures-/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
