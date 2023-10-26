@@ -147,8 +147,6 @@ void Get_next_patient()
         patient_status[RequestedSpec][i] = patient_status[RequestedSpec][i+1] ; 
       }
       queue_length[RequestedSpec] --;
-
-
 }
 
 void Exit()
