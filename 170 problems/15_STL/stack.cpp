@@ -9,7 +9,6 @@ void print(stack<string> &s) {
     s.pop();
   }
   cout << "\n";
-
 }
 
 
