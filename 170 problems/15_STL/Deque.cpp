@@ -3,6 +3,8 @@
 using namespace std;
 
 /*
+*/
+
 void print_back(deque<int> q) {
   cout<< "Queue elements (back): ";
   while(!q.empty()) {
@@ -20,7 +22,6 @@ void print_front(deque<int> &q) {
   }
   cout<< "\n";
 }
-*/
 
 // Is it a palindrome?
 bool is_palindrome(string str = "abba") {
@@ -44,7 +45,6 @@ bool is_palindrome(string str = "abba") {
 
 int main()
 {
-/*
    deque<int> q;
    q.push_back(20);  // q: 20
    q.push_back(30);  // q: 20  30 
@@ -52,7 +52,6 @@ int main()
    q.push_front(10);  // q: 10 20 30 40  
    q.push_back(50);  // q: 10 20 30 40 50 
    q.push_front(0);  // q: 0 10 20 30 40 50 
-
 
    deque<int> copy = q;
    print_back(q);  // q: 50 40 30 20 10 0  
@@ -62,16 +61,16 @@ int main()
    cout<<copy.size() << "\n";
    cout<<copy[1] << "\n";
    cout<<copy.at(1) << "\n";
-   cout<<copy.at(1000) << "\n";  // throws std::out_of_range exception
-
+   // cout<<copy.at(1000) << "\n";  // throws std::out_of_range exception
 
    copy.clear();
    cout<<copy.size() << "\n";
-*/
    cout << boolalpha;  // print true as true
    cout << is_palindrome("abba") << "\n";  // true
    cout << is_palindrome("abcba") << "\n";  // true
    cout << is_palindrome("xyy") << "\n";  // false
+/*
+*/
 
   return 0;
 }

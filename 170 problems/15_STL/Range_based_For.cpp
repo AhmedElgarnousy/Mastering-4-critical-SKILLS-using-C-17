@@ -15,7 +15,7 @@ int main() {
     cout<<"\n";
 
     deque<int> q {1,2,3,4,5};
-    for(const auto &val : q)
+    for(const auto &val : q)   // most perfered way to iterate 
       cout<< val << " ";
     cout<<"\n";
 
@@ -23,9 +23,12 @@ int main() {
       cout<< val << " ";
     cout<<"\n";
 
-    for(auto val : "hello")
+  string name = "hello";
+    for(auto val : name){
       cout<< val << " ";
+    }
     cout<<"\n";
 
+    cout<<name<<"\n";
   return 0;
 }

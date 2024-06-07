@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+// using namespace std;
 
 
 
@@ -12,8 +12,9 @@ int num2 = 500767;
 int res = num1 + num2;
 
 
+   std::cout<< std::chrono::time_point<<"\n";
 
-  cout<<"Sumo Team print result : "<< res;
+  std::cout<<"Sumo Team print result : "<< res;
 
   // cout<<"I am Ahmed" <<endl;
   // cout<<"1 + 2 + 3 + 4= "<<1+2+3+4 <<endl;

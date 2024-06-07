@@ -18,7 +18,7 @@ void test1() {
     cout<<"\n";
 
     vector<int> v2(5, 7);
-    //  Like an array with 5 numbers all initialized with 7
+    // Like an array with 5 numbers all initialized with 7
 
     v2.push_back(13); // now add extra num = 13
 
@@ -72,8 +72,8 @@ void test3() {
 int main() {
 
 
-  // test1();
+  //  test1();
   // test2();
-  // test3();
+   test3();
   return 0;
 }
