@@ -1,5 +1,0 @@
-D:/Auto_Mechatronics/E-Mobility_Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/16_Files and Streams-/build/CMakeFiles/files_streams1.dir
-D:/Auto_Mechatronics/E-Mobility_Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/16_Files and Streams-/build/CMakeFiles/files_streams2.dir
-D:/Auto_Mechatronics/E-Mobility_Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/16_Files and Streams-/build/CMakeFiles/sstreams.dir
-D:/Auto_Mechatronics/E-Mobility_Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/16_Files and Streams-/build/CMakeFiles/edit_cache.dir
-D:/Auto_Mechatronics/E-Mobility_Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/16_Files and Streams-/build/CMakeFiles/rebuild_cache.dir

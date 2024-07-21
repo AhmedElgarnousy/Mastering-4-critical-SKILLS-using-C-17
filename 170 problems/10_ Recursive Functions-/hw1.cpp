@@ -17,7 +17,6 @@ uint64_t my_Pow(uint8_t val, uint8_t p=2) {
 
 // Array Maximum
 int arr_max(int arr[], int len) {
-
     int size = len-1, i = 0; 
 
     // base case 
@@ -49,7 +48,7 @@ int arr_sum(int arr[], int len) {
 
 //  Array average
 double arr_avg(int arr[], int len) {
-        int size = len-1; 
+    int size = len-1; 
 
     // base case 
     if(len == 0)
@@ -70,7 +69,7 @@ void arr_increment(int arr[], int len) {
 }
 
 void accumulate_arr(int arr[], int len) {
-    static int accumulate =0; 
+    static int accumulate = 0; 
 
     if (len == -1) {
         return;
@@ -84,7 +83,6 @@ void accumulate_arr(int arr[], int len) {
 void left_max(int arr[], int len) {
     static int maxVal = 0;
     if(len == -1){
-        // max = arr[0];
         return;
     }
     left_max(arr, len -1);
@@ -96,8 +94,7 @@ void left_max(int arr[], int len) {
 
 
 //////////////////////////testing/////////////////////////////////////
-
-void test1(){
+void test1() {
     cout<< my_Pow(7)<<"\n";
     cout<< my_Pow(7, 0)<<"\n";
     cout<< my_Pow(7, 1)<<"\n";
@@ -107,17 +104,17 @@ void test1(){
     cout<< my_Pow(2, 32)<<"\n";
 }
 
-void test2(){
+void test2() {
     int arr1[] = {1,80,2,10,3};
     cout<<arr_max(arr1, 5)<<"\n";
 }
 
-void test3(){
+void test3() {
     int arr1[] = {1,8,2,10,3};
     cout<<arr_sum(arr1, 5)<<"\n";
 }
 
-void test4(){
+void test4() {
     int arr1[]= {1,8,2,10,3};
     cout<<arr_avg(arr1, 5)<<"\n";
 }
@@ -149,7 +146,6 @@ void test6() {
 void test7() {
     int arr1[] = {1, 3, 5 , 7 , 4, 2};
     left_max(arr1, 5);
-
 }
 
 

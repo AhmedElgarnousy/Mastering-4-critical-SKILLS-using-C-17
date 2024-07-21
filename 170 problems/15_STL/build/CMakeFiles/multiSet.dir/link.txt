@@ -1,3 +1,0 @@
-"C:\Users\Ahmed Kamal\Downloads\cmake-3.27.0-windows-x86_64\bin\cmake.exe" -E rm -f CMakeFiles\multiSet.dir/objects.a
-C:\Users\AHMEDK~1\DOWNLO~1\X86_64~1.0-R\mingw64\bin\ar.exe qc CMakeFiles\multiSet.dir/objects.a @CMakeFiles\multiSet.dir\objects1.rsp
-C:\Users\AHMEDK~1\DOWNLO~1\X86_64~1.0-R\mingw64\bin\C__~1.EXE -Wl,--whole-archive CMakeFiles\multiSet.dir/objects.a -Wl,--no-whole-archive -o multiSet.exe -Wl,--out-implib,libmultiSet.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\multiSet.dir\linkLibs.rsp

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Automotive mechatronics/E-Mobility Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/05_Loops",
-      "program": "d:/Automotive mechatronics/E-Mobility Engineer/1-Programming Languages/cpp/CPP/Cpp_Projects/170 problems/05_Loops/build/Debug/outDebug",
+      "cwd": "e:/E-Mobility_Engineer/1-Programming Languages/cpp/codes/Cpp_Projects/170 problems/05_Loops",
+      "program": "e:/E-Mobility_Engineer/1-Programming Languages/cpp/codes/Cpp_Projects/170 problems/05_Loops/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

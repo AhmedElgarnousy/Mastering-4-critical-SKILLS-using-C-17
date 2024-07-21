@@ -17,70 +17,16 @@ int main() {
 // cout<<(1,2,3,4,5);
 // 2*3, cout<<10;
 
-int a {10}, b{3}, c{5};
+// int a {10}, b{3}, c{5};
 
-a += b+=c +=5-3;
+// a += b+=c +=5-3;
 
-cout<<a;
-
-
-/*********************************************************************************
- * 												Easy: Homework 1: Guess Program Output                 *
-/********************************************************************************/
-/*********************************************************************************
- * 												Easy: Homework 2: Guess Program Output                 *
-/********************************************************************************/
-/*********************************************************************************
- * 												Easy: Homework 3: Guess Program Output                 *
-/********************************************************************************/
+// cout<<a;
 
 
 /*********************************************************************************
- * 												Medium: Problem #1: Is even?                           *
+ * 							Easy: Homework 1: Guess Program Output              *
 /********************************************************************************/
-/*********************************************************************************
- * 											Medium: Problem #2: Last 3 digits sum                    *
-/********************************************************************************/
-/*********************************************************************************
- * 									  	Medium: Problem #3: 4th digits from the end              *
-/********************************************************************************/
-/*********************************************************************************
- * 									  	Medium: Homework 1: Guess the output                     *
-/********************************************************************************/
-
-/*********************************************************************************
- * 									  	Medium: Homework 2: Create logic!                        *
-/********************************************************************************/
-
-/*********************************************************************************
- * 									  	Medium: Homework 3: Simplify expressions                 *
-/********************************************************************************/
-
-/*********************************************************************************
- * 								      	Easy: Problem #1: Averages                             *
-/********************************************************************************/
-/*********************************************************************************
- * 											  Easy: Problem #2: Fractional Part                      *
-/********************************************************************************/
-/*********************************************************************************
- * 											  Easy: Problem #3: Our remainder                        *
-/********************************************************************************/
-
-
-
-
-/*********************************************************************************
- * 											 		Hard: Problem #1: 100 or 7?                          *
-/********************************************************************************/
-
-/*********************************************************************************
- * 											 		Hard: Problem #2: Years!                             *
-/********************************************************************************/
-	
-	
-	
-	
-	
 	/*
 		Section: Operators.
 		Description: Problem #1: Guess Program Output
@@ -103,9 +49,10 @@ cout<<a;
 		cout<<a<<"\n";
 
 	 */
-
-
-	/*
+/*********************************************************************************
+ * 						Easy: Homework 2: Guess Program Output                 *
+/********************************************************************************/
+/*
 		Section: Operators.
 		Description: Problem #2: Guess Program Output
 		Level: Easy Challenge
@@ -118,7 +65,10 @@ cout<<a;
 		   c = a+b, a = b, b = c) <<endl; //8 5 8  out= 8 ,comma operator just print the last result
 	*/
 
-	/*
+/*********************************************************************************
+ * 						Easy: Homework 3: Guess Program Output                 *
+/********************************************************************************/
+/*
 		Section: Operators.
 		Description: Problem #3: Guess Program Output
 		Level: Easy Challenge
@@ -149,75 +99,33 @@ cout<<a;
 	*/
 
 
+/*********************************************************************************
+ * 				     	Medium: Problem #1: Is even?                           *
+/********************************************************************************/
+
+/*
+int num;
+
+while(1) {
+	cin>>num;
+
+// is even using %2
+// bool is_even1 = num % 2 == 0? 1:0;
+
+// is even using /2
+// bool is_even2 = (float(num) / 2) == num / 2 ? 1: 0;
+
+// is even using %10
+bool is_even3 = (num % 10) %2 == 0 ? 1: 0;
 
 
 
-	/*
-	    Section: Operators.
-	    Description: Problem #1: Averages
-	    Write a program that reads 5 numbers and print the following:
- 	 	 	 A) Their average
- 	 	 	 B) The sum of the first 3 numbers divided by the sum of the last 2 numbers
- 	 	 	 C) The average of the first 3 numbers divided by the average of the last 2 numbers.
- 	 	 	 What is the math relation between B and C?
- 	 	Input 1 2 3 4 5
- 	 	 	 3
- 	 	 	 0.666666667
- 	 	 	 0.444444444
-	    Level: Easy Challenge
+// cout<<is_even1<<"\n";
+// cout<<is_even2<<"\n";
+cout<<is_even3<<"\n";
 
-
-	float num1,num2, num3, num4, num5;
-	float B_req, C_req;
-	cout<<"Enter 5 numbers: ";
-	cin>>num1>>num2>>num3>>num4>>num5;
-
-	cout<<"Their Average is: "<< (num1 + num2 + num3 + num4 + num5)/5<<"\n";
-	cout<<(B_req=(num1 + num2 + num3) / (num4 + num5)) <<"\n";
-
-	cout<<(C_req=((num1 + num2 + num3)/3.0) / ((num4 + num5)/2.0)) <<"\n";
-	 */
-
-	/*
-		 Section: Operators.
-		 Description: Problem #2: Fractional Part
-		 Write a program that reads 2 numbers a, b and divides them (a/b), but prints
-		  only the fraction part
-	 	 Input 201 25
-	 	 Output: 0.04
-	 	 	 Notice: 201 / 25 = 8.04
-	 	 	 We only want the fraction part: 0.04
-		 Level: Medium Challenge
-
-
-	int num1 , num2;
-	double fractional , remainder;
-	cout<<"Enter 2 Numbers: ";
-	cin>>num1>>num2;
-	remainder = num1 % num2;
-	fractional = remainder/num2;
-	cout<<fractional;
-	*/
-
-	/*
-		 Section: Operators.
-		 Description: Problem #3: Our remainder
-		 We know N % M computes the remainder of division
-		 Write a program that reads 2 positive integers and print such reminder without
-			using the modulus operator %
-	     Input: 27 12
-		 Output: 3
-			 Remember in math: 27 % 12 = 3
-		 Level: Medium Challenge
-
-	int num1 , num2;
-	cout<<"Enter 2 numbers: ";
-	cin >>num1>>num2;
-	//27 % 12 = 3
-	//27 /12 = 2.25   24/2
-	cout<< "Remainder is: "<<num1 - (num2 * (num1/num2));
-	*/
-
+}
+*/
 
 	/*
 		 Section: Operators.
@@ -252,7 +160,13 @@ cout<<a;
 	 */
 
 
-	/*
+
+
+/*********************************************************************************
+ * 											Medium: Problem #2: Last 3 digits sum                    *
+/********************************************************************************/
+
+/*
 	Section: Operators.
 	Description: Problem #2: Last 3 digits sum
 	Write a program that reads an integer and prints the sum of its last 3 digits.
@@ -278,7 +192,10 @@ cout<<a;
 	cout<<(last_digit + second_digit + first_digit);
 	 */
 
-	/*
+/*********************************************************************************
+ * 									  	Medium: Problem #3: 4th digits from the end              *
+/********************************************************************************/
+/*
 	Section: Operators.
 	Write a program that reads an integer and print the 4th from the right side. If
 	 no such digit, print 0
@@ -302,7 +219,103 @@ cout<<a;
 	cout<<fouth_dig_Rs;
 	 */
 
+/*********************************************************************************
+ * 									  	Medium: Homework 1: Guess the output                     *
+/********************************************************************************/
+	
+
+/*********************************************************************************
+ * 									  	Medium: Homework 2: Create logic!                        *
+/********************************************************************************/
+
+/*********************************************************************************
+ * 									  	Medium: Homework 3: Simplify expressions                 *
+/********************************************************************************/
+
+/*********************************************************************************
+ * 								      	Easy: Problem #1: Averages                             *
+/********************************************************************************/
+
+/*
+	    Section: Operators.
+	    Description: Problem #1: Averages
+	    Write a program that reads 5 numbers and print the following:
+ 	 	 	 A) Their average
+ 	 	 	 B) The sum of the first 3 numbers divided by the sum of the last 2 numbers
+ 	 	 	 C) The average of the first 3 numbers divided by the average of the last 2 numbers.
+ 	 	 	 What is the math relation between B and C?
+ 	 	Input 1 2 3 4 5
+ 	 	 	 3
+ 	 	 	 0.666666667
+ 	 	 	 0.444444444
+	    Level: Easy Challenge
+
+
+	float num1,num2, num3, num4, num5;
+	float B_req, C_req;
+	cout<<"Enter 5 numbers: ";
+	cin>>num1>>num2>>num3>>num4>>num5;
+
+	cout<<"Their Average is: "<< (num1 + num2 + num3 + num4 + num5)/5<<"\n";
+	cout<<(B_req=(num1 + num2 + num3) / (num4 + num5)) <<"\n";
+
+	cout<<(C_req=((num1 + num2 + num3)/3.0) / ((num4 + num5)/2.0)) <<"\n";
+	 */
+
+/*********************************************************************************
+ * 											  Easy: Problem #2: Fractional Part                      *
+/********************************************************************************/
+
+/*
+		 Section: Operators.
+		 Description: Problem #2: Fractional Part
+		 Write a program that reads 2 numbers a, b and divides them (a/b), but prints
+		  only the fraction part
+	 	 Input 201 25
+	 	 Output: 0.04
+	 	 	 Notice: 201 / 25 = 8.04
+	 	 	 We only want the fraction part: 0.04
+		 Level: Medium Challenge
+
+
+	int num1 , num2;
+	double fractional , remainder;
+	cout<<"Enter 2 Numbers: ";
+	cin>>num1>>num2;
+	remainder = num1 % num2;
+	fractional = remainder/num2;
+	cout<<fractional;
+	*/
+/*********************************************************************************
+ * 											  Easy: Problem #3: Our remainder                        *
+/********************************************************************************/
+
 	/*
+		 Section: Operators.
+		 Description: Problem #3: Our remainder
+		 We know N % M computes the remainder of division
+		 Write a program that reads 2 positive integers and print such reminder without
+			using the modulus operator %
+	     Input: 27 12
+		 Output: 3
+			 Remember in math: 27 % 12 = 3
+		 Level: Medium Challenge
+
+	int num1 , num2;
+	cout<<"Enter 2 numbers: ";
+	cin >>num1>>num2;
+	//27 % 12 = 3
+	//27 /12 = 2.25   24/2
+	cout<< "Remainder is: "<<num1 - (num2 * (num1/num2));
+	*/
+
+
+
+
+/*********************************************************************************
+ * 											 		Hard: Problem #1: 100 or 7?                          *
+/********************************************************************************/
+/*
 	 Section: Operators
 	 Description:Problem #1: 100 or 7?
 		Write a program that reads an integer and print 100 if number is even or 7 if
@@ -310,47 +323,82 @@ cout<<a;
 		 E.g. for input 8 -> 100
 		 E.g. for input 133 -> 7
 	 Level: Hard Challenge
+*/
 
-
-	int num;
-	cout<<"Enter a number: ";
+/*
+    int num;
 	cin>>num;
-	bool is_even = num%2 == 0;
-	bool is_odd = num%2 == 1;
 
-	cout<<(is_even * 100 + is_odd * 7);
+	num%2 == 0 ? cout<<"100"<<"\n" : cout<<"7"<<"\n";
 
-	//if (is_even == 1)
-	//{
-		//cout<<"100";
+	// bool is_even = num%2 == 0 ?1 : 0;
+	// if(is_even)
+	// {	 
+	//	cout<<"7"<<"\n";
+	//	return 0;
 	//}
-	//else
-	//{
-		//cout<<"7";
-	//}
-	*/
+    //cout<<"7"<<"\n";
+
+*/
+
+	
 
 
-
-	/*
+/*********************************************************************************
+ * 											 		Hard: Problem #2: Years!                             *
+/********************************************************************************/
+	
+		/*
 	 Section: Operators
 	 Description:Problem #1: 100 or 7?
 		Assume a year is 12 months, but each month is 30 days
  	 	 That is a year has 12 * 30 = 360 days
  	 	 Read an integer: whole number of days of someone age. Print 3 numbers
- 	 	 Total years total months remaining days
+ 	 	 
+		 Total years total months remaining days
+
  	 	 Inputs -> Outputs
- 	 	 360 1 0 0 each 360 days a year
- 	 	 30 0 1 0 each 30 days a month
- 	 	 10 0 0 10 just days infant!
- 	 	 391 1 1 1 391 = 360 + 30 + 1 = 1 year, 1 month, 1 day
- 	 	 61 0 2 1 61 = 2*30 + 1
- 	 	 200 0 6 20 200 = 30*6 + 20
- 	 	 1000 2 9 10 1000 = 2*360 + 9*30 + 10
- 	 	 5000 13 10 20
+ 	 	 360   1 0 0     each 360 days a year
+ 	 	 30    0 1 0     each 30 days a month
+ 	 	 10    0 0 10    just days infant!
+ 	 	 391   1 1 1     391 = 360 + 30 + 1 = 1 year, 1 month, 1 day
+ 	 	 61    0 2 1     61 = 2*30 + 1
+ 	 	 200   0 6 20    200 = 30*6 + 20
+ 	 	 1000  2 9 10    1000 = 2*360 + 9*30 + 10
+ 	 	 5000  13 10 20
+
 	 Level: Hard Challenge
 	 */
 
+	/*
+	int num;
+	cin>>num;
+
+	int days, months, years;
+
+
+	//num < 30 ? days = num, months=years=0, cout<<years<<" "<< months<<" "<<days : num < 360 && num >= 30? :days = num, months=years=0, cout<<years<<" ":days = num, months=years=0, cout<<years<<" ";
+	// num < 30 ? days = num, months=years=0, cout<<years<<" "<< months<<" "<<days<<"\n" : num < 360 && num >= 30?:cout<<"No":cout<<"yes";
+
+	// search for multiple ternaey operators
+	
+	// cout<<70 % 30<<"\n";
+	//(num < 360 && num >= 30) ? cout<<0<<" "<< num/30<<" "<<num%30<<"\n" : cout<<"No";
+	// (num >= 360) ? cout<<num/365<<" "<< num - (num/365)<<" "<<num%30<<"\n" : cout<<"No";
+	
+	*/
+
+		int days;
+		cin>>days;
+
+		int years = days / 360;
+
+		int days_mons = days % 360;
+		int months = days_mons / 30;
+
+		days = days_mons % 30;
+
+		cout<<years<<" "<<months<<" "<<days<<"\n";
 
 	return 0;
 }
