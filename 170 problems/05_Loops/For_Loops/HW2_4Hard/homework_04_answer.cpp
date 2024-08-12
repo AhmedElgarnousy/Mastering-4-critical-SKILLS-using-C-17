@@ -3,25 +3,14 @@ using namespace std;
 
 int main()
 {
+
     /***********************************************************************
-    *                  Medium: Problem #4: Print Primes                    *
+    *                  Hard: Problem #4: Digit Sum in a Range              *
     /**********************************************************************/
-
-    int num;
-    cout << "Enter N less than 500: ";
-    cin >> num;
-    while (num--)
-    {
-        for (int i = 2; i < num; i++)
-        {
-            if (num % i == 0)
-                break;
-
-            if (i == num - 1)
-                cout << num << " ";
-        }
-    }
-    cout << 2 << " ";
-
+    /*
+    Section: Loops.
+    Description: Problem #: Digits sum in range
+    Level: Medium to hard Challenge
+    */
     return 0;
 }

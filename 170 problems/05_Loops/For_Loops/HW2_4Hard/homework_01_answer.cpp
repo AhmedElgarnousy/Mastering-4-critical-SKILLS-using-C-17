@@ -1,31 +1,67 @@
 #include <iostream>
 using namespace std;
 
+
+
+
 int main()
 {
-    /***********************************************************************
-    *                  Medium: Problem #1: Find Special Pairs              *
-    /**********************************************************************/
-    /*
-    Problem #1: Find Special Pairs
-        ● Count how many positive integers (X and Y) meet the following criteria:
-            ○ X in the range [50-300]
-            ○ Y in the range [70-400]
-            ○ X < Y
-            ○ (X+Y) divisible by 7
-        ● Output
-            ○ 8040
-    */
-    int count = 0;
-    for (int x = 50; x <= 300; x++)
+    /****************************************************
+    *           Hard: Problem #1: Printing X            *
+    /***************************************************/
+    int spaces, stars;
+    int oddNum;
+    cout<<"Enter odd Num, less than 500: ";
+    cin >> oddNum;
+
+    int lines = oddNum;
+
+    int curline = 0;
+    spaces = lines - 2;
+    
+    while (oddNum--)
     {
-        for (int y = 70; y <= 400; y++)
-        {
-            if (x < y && (x + y) % 7 == 0)
-                count++;
+        
+        if (curline == lines / 2)
+        {// print one star in the middle
+           for (int i = 0; i < curline; i++)
+               cout << "-";
+
+           cout << "*";
+           //cout << "*"<<"\n";
+           //continue;
         }
+        else{
+
+        if (curline > (lines / 2) )  
+        {
+            curline = (lines -1 ) - curline;
+            // curline = 0;
+            // cout<<"curLine after lines/2: "<<curline<<"\n";  
+          
+            spaces = lines -2;
+        }
+
+        for (int i = 0; i < curline; i++)
+            cout << "-";
+
+        cout << "*";  // first star
+
+        for (int i = 0; i < spaces; i++)  // spaces  between stars
+            cout << "-";
+
+        cout << "*";  // second star
+
+        // can be removed
+        for (int i = 0; i < curline; i++)
+            cout << "-";
+        }
+
+        cout << "\n";
+        curline++;
+        spaces -= 2;
+     
     }
-    cout << count;
 
     return 0;
 }

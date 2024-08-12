@@ -2,8 +2,14 @@
 
 using namespace std;
 /**************************************************
- * 			Homework 7: Replace substrin          *
+ * 			Homework 7: Replace substring         *
 /*************************************************/
+
+string replace_str(string input, string pattern, string to)
+{
+    
+}
+
 int main()
 {
 

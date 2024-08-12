@@ -6,15 +6,18 @@ using namespace std;
 int main()
 {
   const int EmpMaxSize {100};
-  int UserInput, StartAge, EndAge;
+
   string EmployeeNames [EmpMaxSize];
-  int NoOfEmployees {-1};
   int EmployeeAges [EmpMaxSize];
   int EmployeeSalaries [EmpMaxSize];
   char EmployeeGenders [EmpMaxSize];
 
+  int UserInput, StartAge, EndAge;
+  int NoOfEmployees {-1};
   string EmpName ;
   int UpdatedSalary;
+
+
   while(1)
   {
   // Display the following choices  
