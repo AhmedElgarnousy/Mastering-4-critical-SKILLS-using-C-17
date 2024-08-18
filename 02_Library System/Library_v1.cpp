@@ -375,7 +375,6 @@ struct Library_System
         return 1;
     }
 
-    
     void print_users()   // choice 9
     {
         // print the user data

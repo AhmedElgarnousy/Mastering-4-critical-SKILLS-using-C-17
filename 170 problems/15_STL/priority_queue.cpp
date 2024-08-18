@@ -1,6 +1,13 @@
 #include <iostream>
-#include<queue>
+#include<queue> // queue, priority_queue, deque
+
 using namespace std;
+
+
+// like normal queue but sorted according to specified priority
+// by default can sorted from small to big 
+// can be changed
+// 1- by * in -ve  2- add some syntax
 
 void print(priority_queue <int> &pq) {
   cout << "priority Queue elements: ";
