@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 struct ThreadQuestion{
   string ques_text;
   vector<string> thread_ques_answers;
@@ -30,12 +29,15 @@ struct User {
 
 struct AskMe {
   vector<User> users;
+  // utilites
   int get_id()
   {
     static int id = 101;
     id += 10;
     return id;
   } 
+  
+  // methods
   int main_menu()
   {
     int userInput;
@@ -55,6 +57,48 @@ struct AskMe {
     int password;
     cout<<"Enter username & password: ";
     cin>>username>>password;
+
+    int wantSignup;
+    bool userExist = false;
+
+    // makesure that user already exists(sign up)
+    // use find or loop
+
+    // we allow differet users with same name for now
+    // but we generate unique id for each user
+    // so check with id 
+
+    if((int)users.size() >= 1)
+    {
+      // search if user exist or not
+      for(auto &usr: users)
+      {
+        if(username == usr.username)
+          userExist = true;
+      }
+      if(!userExist){
+        cout<<"user doesn't exists\n";
+        
+        cout<<"press 1 to sign up firstly or -1 to exit: ";
+        cin>>wantSignup;
+        
+        if(wantSignup != -1)
+          Sign_up_menu();
+        else
+          return;
+      }
+    }
+    else
+    {
+      cout<<"system has NO users\\nplease sign up firstly\n";
+      cout<<"press 1 to sign up firstly or -1 to exit: ";
+      cin>>wantSignup;
+        
+      if(wantSignup != -1)
+        Sign_up_menu();
+      else
+        return;
+    }
   }
   
   void Sign_up_menu () {
@@ -144,43 +188,53 @@ struct AskMe {
   }
   void run()
   {
-    while(1)
+    while(1)// askme program
     { 
         int m_choice, p_choice;
 
-        m_choice = main_menu();
-        switch(m_choice)
+        while(1) // system sign program
         {
-          case 1:
-            login_in_menu();break;
-          case 2:
-            Sign_up_menu();break;
-          default:
-            break;
+          m_choice = main_menu();
+          switch(m_choice)
+          {
+            case 1:
+              login_in_menu(); break;
+            case 2:
+              Sign_up_menu();break;
+            default:
+              cout<<"sign system: Invalid choice!\n";
+              break;
+          }
+          break;
         }
+      
 
-        system("clear"); // for clear
-
-        p_choice = program_menu();
-        switch(p_choice)
+        //system("clear"); // for clear
+        while(1)  // user program
         {
-          case 1:
-            print_questions_to_me(); break;
-          case 2:
-            print_questions_from_me(); break;
-          case 3:
-            print_questions_from_me(); break;
-          case 4:
-          answer_questions(); break;
-          case 5:
-            delete_questions(); break;
-          case 6:
-            list_system_users(); break;
-          case 7:
-            feed();break;
-          case 8:
-            logout_out(); break;
-          default: break;
+          p_choice = program_menu();
+          switch(p_choice)
+          {
+            case 1:
+              print_questions_to_me(); break;
+            case 2:
+              print_questions_from_me(); break;
+            case 3:
+              print_questions_from_me(); break;
+            case 4:
+            answer_questions(); break;
+            case 5:
+              delete_questions(); break;
+            case 6:
+              list_system_users(); break;
+            case 7:
+              feed();break;
+            case 8:
+              logout_out(); break;
+            default:
+            cout<<"user program: Invalid choice!\n"; break;
+          }
+          break;
         }
     }
   }
