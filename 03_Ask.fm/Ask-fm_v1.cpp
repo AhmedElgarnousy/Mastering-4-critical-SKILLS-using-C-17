@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 
+
 using namespace std;
 
 struct ThreadQuestion{
@@ -12,7 +13,7 @@ struct ThreadQuestion{
 struct Question {
   string ques_text;
   int id;
-  vector<string> answers;
+  string answer = "empty";
   vector<ThreadQuestion> thread_questions;
 };
 
@@ -30,10 +31,16 @@ struct User {
 struct AskMe {
   vector<User> users;
   // utilites
-  int get_id()
+  int get_user_id()
   {
     static int id = 101;
     id += 10;
+    return id;
+  } 
+  int get_question_id()
+  {
+    static int id = 20;
+    id += 1;
     return id;
   } 
   
@@ -118,7 +125,7 @@ struct AskMe {
     cin>>allowAnonymous;
 
     User newUser;
-    newUser.id = get_id();
+    newUser.id = get_user_id();
     newUser.username = username;
     newUser.password = password;
     newUser.name = name;
@@ -149,15 +156,60 @@ struct AskMe {
   }
   void print_questions_to_me()
   {
-    
+    for(auto &usr: users)
+    {
+      for(auto &que: usr.questions)
+      {
+        cout<<"Question Id ("<<que.id<<") from user id ("<<usr.id<<")"<<"\t"<<"Question: "<<que.ques_text<<"\n";
+        cout<<"\t Answer: "<<que.answer<<"\n";
+        /*
+        for(auto &thread_q: que.thread_questions)
+        {
+
+        }
+        */
+      }
+    }
   }
   void print_questions_from_me()
   {
-
+    // you have to print the current user questions
+    // but for now print all users questions
+    for(auto &usr: users)
+    {
+      for(auto &que: usr.questions)
+      {
+        cout<<"Question Id ("<<que.id<<") from user id ("<<usr.id<<")"<<"\t"<<"Question: "<<que.ques_text<<"\n";
+        // loop if has thread questions for the question
+      }
+    }
   }
   void answer_questions()
   {
+    int q_id;
+    string q_ans;
+    cout<<"Enter question id or -1 to cancel: ";
+    cin>>q_id;
 
+    for(auto &usr: users)
+    {
+      for(auto &que: usr.questions)
+      {
+        if (que.id == q_id)
+        {
+          if(que.answer !="empty")
+          {
+            cout<<"Question Id ("<<que.id<<") from user id ("<<usr.id<<") Question: "<<que.ques_text<<"\n";
+            cout<<"\t Answer: "<<que.answer<<"\n";
+            cout<<"Warning: Already answered. Answer will be updated\n";
+          }
+          cout<<"Enter answer: ";
+          cin>>q_ans;
+          getline(cin, q_ans);
+          que.answer = q_ans;
+        }
+      }
+    }
   }
   void delete_questions()
   {
@@ -165,12 +217,42 @@ struct AskMe {
   }
   void ask_question()
   {
-    int id;
+    // ask a question not a thread
+    int ursId, q_id;
     cout<<"Enter user id or -1 to cancel: ";
-    cin>>id;
-  // search with id in users
-  // check if he allow anoynomous or not
+    cin>>ursId;
+    string q_text;
+    // search with id in users
+    // check if he allow anoynomous or not
+    // user already exist because he sign up 
+    for(auto &usr : users)
+    {
+      if(usr.id == ursId){
 
+        if(!usr.allowAnonymous)
+          cout<<"Note: Anonymous questions are not allowed for this user\n";
+        cout<<"For a thread question: Enter Question id or -1 for new question: ";
+        cin>>q_id;
+
+        if(q_id != -1)
+        {
+          // create a thread question
+        }
+        else
+        {
+          // create a new question
+          cout<<"Enter question text: ";
+          cin>>q_text;
+          getline(cin, q_text); 
+
+          Question newQusestion;
+          newQusestion.id = get_question_id();
+          newQusestion.ques_text = q_text;
+
+          usr.questions.push_back(newQusestion);
+        }
+      }
+    }
   }
   void list_system_users()
   {
@@ -191,7 +273,6 @@ struct AskMe {
     while(1)// askme program
     { 
         int m_choice, p_choice;
-
         while(1) // system sign program
         {
           m_choice = main_menu();
@@ -207,8 +288,6 @@ struct AskMe {
           }
           break;
         }
-      
-
         //system("clear"); // for clear
         while(1)  // user program
         {
@@ -220,11 +299,11 @@ struct AskMe {
             case 2:
               print_questions_from_me(); break;
             case 3:
-              print_questions_from_me(); break;
+              answer_questions(); break;
             case 4:
-            answer_questions(); break;
+            delete_questions(); break;
             case 5:
-              delete_questions(); break;
+              ask_question(); break;
             case 6:
               list_system_users(); break;
             case 7:
@@ -232,9 +311,12 @@ struct AskMe {
             case 8:
               logout_out(); break;
             default:
-            cout<<"user program: Invalid choice!\n"; break;
+            cout<<"user program: Invalid choice!\n";break;
           }
-          break;
+          if(p_choice == 8)
+          {
+            break;
+          }
         }
     }
   }
@@ -242,7 +324,16 @@ struct AskMe {
 
 int main()
 {
+
   AskMe askme;
+  // create a user name 
+  User usr1;
+  usr1.id = askme.get_user_id();
+  usr1.username="ahmed";
+  usr1.password= 111;
+  usr1.name="AhmedKamal";
+  usr1.email="AHmed@gmail.com";
+  askme.users.push_back(usr1);
   askme.run();
 
   return 0;
