@@ -8,6 +8,12 @@ using namespace std;
 void test1() {
    vector<int> v1; // Array thta can be expanded
 
+    cout<<"size is "<<v1.size()<<"\n";
+    for(int i = 0; i < (int)v1.size() -1; i++)
+    {
+      cout << v1[i] <<" ";
+    }
+
     v1.push_back(30); 
     v1.push_back(10); 
     v1.push_back(20);
@@ -31,13 +37,12 @@ void test1() {
 
   // v2.at(1000); exception
   // Later: emplace_back
-
 }
 
 void test2() {
    vector<int> vec {3, -4, 7, -2, -1, 3, -5, 10, 3};
 
-    // let's remove negative values 
+    // let's remove negative values   (slow operation)
     for(auto it = vec.begin(); it != vec.end(); ) {
         if(*it < 0)
         {
@@ -72,8 +77,8 @@ void test3() {
 int main() {
 
 
-  //  test1();
-  // test2();
-   test3();
+  // test1();
+  test2();
+  // test3();
   return 0;
 }

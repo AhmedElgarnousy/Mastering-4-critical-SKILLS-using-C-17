@@ -3,35 +3,49 @@
 
 using namespace std;
 
-
-void print(set<string> &v) {
-
-    for(string x : v)
-        cout << x << " ";
-    cout <<"\n";     
-
+/*
+void print(set<string> &s)
+{
+    for(auto &val: s)
+    {
+        cout<<val<<" ";
+    }
+    cout<<"\n";
+}
+*/
+void print(multiset<string> &s)
+{
+    for(set<string>::iterator it = s.begin(); it != s.end(); it++)
+    {
+        cout<<*it<<" ";
+    }
+    cout<<"\n";
 }
 
 int main()
 {
     
-    set<string> strSet;        // sorted & unique
-    strSet.insert("ziad");
+    multiset<string> strSet;
+    strSet.insert("kamal");
+    strSet.insert("ahmed");
+    strSet.insert("aahmed");
+    strSet.insert("ahmed");
     strSet.insert("mostafa");
-    strSet.insert("mostafa");
-    strSet.insert("mostafa");
-    strSet.insert("ali");
 
-    print(strSet);   // ali ahmed ziad
+    print(strSet);
 
     if(strSet.count("mostafa"))
-        cout<< "YES\n";
+        cout<<"YES\n";
 
-    set<string>::iterator it = strSet.find("mostafa"); 
-    // auto it = strSet.find("mostafa");  // or shorter using auto
-     
-    print(strSet);   // ali ziad
-    
+    multiset<string>::iterator it = strSet.find("ahmed");
+    // auto it = strSet.find("ahmed");  // for shorter code
+
+    if(it != strSet.end()) // return end if not found
+    {
+        strSet.erase(it);
+    }
+    print(strSet);
+
 
 
     return 0;

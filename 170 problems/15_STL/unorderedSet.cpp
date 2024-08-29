@@ -7,7 +7,6 @@ using namespace std;
 
 int main()
 {
-
     unordered_set<int> s1 {20, 10, 20, 5, 30};
 
     s1.insert(7);

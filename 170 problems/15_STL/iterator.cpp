@@ -5,6 +5,8 @@
 using namespace std;
 
 
+
+
 void print_front(deque<int> &q) {
   cout << "Queue elements (front): ";
   deque<int>::iterator it  = q.begin();

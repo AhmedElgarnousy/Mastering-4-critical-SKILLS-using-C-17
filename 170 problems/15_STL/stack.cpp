@@ -15,11 +15,20 @@ void print(stack<string> &s) {
 int main()
 {
   stack<string> s;
-  s.push("Elgarnous");
+
+  s.push("Elgarnousy");
   s.push("Kamal");
   s.push("Ahmed");
+  
+  stack<string>copy = s;
 
-  print(s);      // Ahmed Kamal Elgarnousy
+  while(!s.empty())
+  {
+    cout<<s.top()<<" ";
+    s.pop();
+  }
+  cout<<"\n";
+  print(copy);      // Ahmed Kamal Elgarnousy
 
 
   return 0;

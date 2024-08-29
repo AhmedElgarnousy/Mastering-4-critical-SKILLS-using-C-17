@@ -18,7 +18,7 @@ int main() {
     // starting the search at 6th character
     cout<< test.find("abc", 5) << "\n";  // 7
 
-    cout<< "Mostafa at: "<< test.find("Mostafa") << "\n";  // 18446744073709551615
+    cout<< "Mostafa at: "<< test.find("Mostafa") << "\n";  // 18446744073709551615 (unsigned)
     cout<< "Mostafa at: "<< (int)test.find("Mostafa") << "\n";  // -1
 
     // functions that searches for a CHARACTER  from a given string

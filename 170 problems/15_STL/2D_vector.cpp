@@ -55,16 +55,32 @@ void test2() {
   v2d[2].erase(v2d[2].begin());
 
   print(v2d);
-
  
 }
 
+void test()
+{
+
+vector<vector<vector<int>>> v3d( 2, vector<vector<int>> (3, vector<int>(4) ));
+
+for(auto &n: v3d){
+  for(auto &row: n)
+    {
+      for(auto &col: row){
+        cout<< col<< " ";
+      }
+        cout<<"\n";
+    }
+        cout<<"\n";
+}
+}
 
 
 int main() {
+  test();
 
 // test1();
-test2();
+// test2();
 
   return 0;
 }
