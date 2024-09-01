@@ -12,7 +12,6 @@ int main()
 {
     printf("\nwelcome c programming\n");
     helloworld();
-
-
+    
     return 0;
 }
