@@ -4,7 +4,7 @@
 - GNU debugger is named: gdb
 - Microsoft visual debugger is a nice one (at least vs old gdb versions)
 
-## gdb
+## GNU Debugger (gdb)
 
 ### Power of gdb
 
@@ -61,6 +61,78 @@
 - p variable
 - p &variable ----address
 
-### variables view
+### watch
 
-### stack view
+$ watch varName # stop when var changes (Put a auto breakpoint on the variable)
+
+Also can put a condition
+**$ watch var==3**
+
+old value (expression) = 0
+New value (expression) = 1
+
+To test that this is an expression or value
+Change var value to be 5 initially
+Or
+Change the expression to be true then false
+
+### display
+
+**$ display varName** # display the var value with each command
+
+**$ info display** # to display variables will display with it's ids
+
+**$ undisplay <id>**
+
+### Overwrite
+
+$ set var varname=value
+
+### call
+
+$ call fun(arg1, arg2)
+
+in c++ you can't call the inline function
+
+$ list fun() # display function implementation
+
+The inline function that implemented into the class
+
+$ ptype funname or varname
+
+### print the type
+
+$ whatis
+
+$ disassemble /s
+
+### print the assembly of the source code
+
+**Ctrl + p** // to get the previous commad
+
+**$ set print asm.demangle on** // To disappear the demangling discreption
+
+### stack smash detect
+
+$ backtrace or bt // show the functions frame that in the stack till now
+
+$ frame <id>
+
+$ info registers // To see the stack pointer register
+
+$ show architecture
+
+Show the memory
+
+Stack pointer
+Frame pointer
+
+### mastering gdb segmentation fault
+
+### gdb Reverse
+
+$ target record-full // record instructions to allow u reverse in your code
+
+$ rn or reverse next
+
+Ctrl+x+2 // to view the code as a assembly.
