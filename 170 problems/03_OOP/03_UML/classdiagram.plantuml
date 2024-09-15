@@ -1,0 +1,19 @@
+
+
+@startuml
+class Professor {
+    // Defined elsewhere
+}
+
+class Department {
+    - members_: std::vector<std::weak_ptr<Professor>>
+    - const std::string title_
+}
+
+class University {
+    - faculty_: std::vector<Department>
+}
+
+University *-- Department : faculty_
+Department o-- Professor : members_
+@enduml
