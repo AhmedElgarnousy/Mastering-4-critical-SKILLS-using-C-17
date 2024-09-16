@@ -11,7 +11,7 @@
 - **Programming Fundamentals**
   - Variables, Loops, Control Flow, Functions, Recursive Functions, Arrays (1D, 2D, ND)
 - **Advanced Topics**
-  - Pointers, STL, Templates, Headers, and Includes, Exception Handling, Compilation Process, Debugging
+  - Pointers, STL, files and streams, Templates, Headers and Includes, Exception Handling, Compilation Process, Debugging
 - **Object oriented programming**
   - Objects, Classes, Abstraction, Inheritance, Polymorphism, Operator Overloading
   - Embedded in homework: Several design principles & patterns
