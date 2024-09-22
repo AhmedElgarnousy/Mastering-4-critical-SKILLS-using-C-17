@@ -13,7 +13,7 @@
 - check bin size before and after symbol tables
 
   - g++ main.cpp # **Release mode**
-  - ctrl + x + a # open tui to view code while debugging
+  - `ctrl + x + a` # open tui to view code while debugging
   - $ readelf -a a.out # info about the executable
   - $ nm -a a.out # view the debug symbols
   - $ nm -a a.out | wc -l # to count #of symbols
