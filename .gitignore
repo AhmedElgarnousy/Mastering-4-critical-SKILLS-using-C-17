@@ -5,7 +5,7 @@
 *.d
 
 #pdf
-.pdf
+*.pdf
 
 # Compiled Object files
 *.slo
