@@ -1,0 +1,28 @@
+object's perspective: Data members & functions
+
+- Let's model a college student:
+    -- data members -> which info we need to store
+    -- function members -> which functionalities we need to do
+
+
+class student{
+    private:
+        string department;
+        int registration_year;
+        string attended_classes[];
+        double gpa;
+        // etc;
+    public:
+        void add_new_registered_course(string course)
+        {
+        }
+        void get_gpa() {
+
+        }
+        void update_gpa() {
+
+        }
+        // etc;
+
+
+}
