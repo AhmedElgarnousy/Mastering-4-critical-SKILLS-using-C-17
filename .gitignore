@@ -1,10 +1,11 @@
+# vscode 
 .vscode/
 .vscode/*
 
 # Prerequisites
 *.d
 
-#pdf
+# pdf
 *.pdf
 
 # Compiled Object files
