@@ -65,3 +65,5 @@ class unique_ptr {
 ---
 
 ##### shared pointers
+
+##### week pointers
