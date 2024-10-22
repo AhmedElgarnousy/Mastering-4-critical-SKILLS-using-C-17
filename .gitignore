@@ -7,6 +7,11 @@
 
 # pdf
 *.pdf
+.pdf
+abc.pdf
+funny/pdf/abc.pdf
+pdf/.pdf
+pdf/abc.pdf
 
 # Compiled Object files
 *.slo
