@@ -27,5 +27,18 @@ int main()
 
     Level: Hard Challenge
     */
+    int N;
+    cin >> N;
+    int start = 1, end = N, res = start + end;
+    // start != end + 1? start++, end--, res+= start+end:
+    cout << INT_MAX << '\n'; // 2^31
+    /*
+    while (N != 1)
+    {
+        res += N;
+        N--;
+    }
+    cout << res << "\n";
+    */
     return 0;
 }

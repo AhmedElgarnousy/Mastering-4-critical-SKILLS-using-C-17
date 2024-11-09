@@ -4,9 +4,6 @@ using namespace std;
 
 int main()
 {
-    /*****************************************************************************
-    *                   Medium: Problem #1: Guess Program Output                 *
-    /****************************************************************************/
 
     /*
     Section: DataTypesAndVariables.cpp .

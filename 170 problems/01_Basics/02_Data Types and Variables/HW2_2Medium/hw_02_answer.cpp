@@ -4,10 +4,6 @@ using namespace std;
 
 int main()
 {
-    /*****************************************************************************
-    *                   Medium: Problem #2: Swapping 2 numbers!                  *
-    /****************************************************************************/
-
     /*
     Section:     DataTypesAndVariables.cpp .
     Description: Problem #2: Swapping 2 numbers!

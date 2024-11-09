@@ -20,6 +20,11 @@ int main()
 
     Level: Hard Challenge
     */
+    int A, B, res;
+    cin >> A >> B;
+    // B -> -1 or 1
+    B == 1 ? res = 2 *A + 1 : res = A * A;
+    cout << res << "\n";
 
     return 0;
 }
